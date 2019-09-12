@@ -1,4 +1,5 @@
 # metalog
+Sergey Kim, Reidar Brumer Bratvold
 
 ## Metalog Distribution
 
