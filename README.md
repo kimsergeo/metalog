@@ -9,7 +9,7 @@ The metalog distributions constitute a new system of continuous univariate proba
 The following [paper](http://www.metalogdistributions.com/images/TheMetalogDistributions.pdf) and [website](http://www.metalogdistributions.com/home.html) provide a full background of the metalog distribution.
 
 
-# Using the Package
+## Using the Package
 
 This Python package was transfered from [RMetalog](https://github.com/isaacfab/RMetalog) package and therefore shares the same R-based structure.
 
