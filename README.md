@@ -23,6 +23,7 @@ salmon = pd.read_csv("Chinook and forage fish lengths.csv")
 
 # Filtered data for eelgrass vegetation and chinook salmon
 salmon = salmon[(salmon['Vegetation'] == 'Eelgrass') & (salmon['Species'] == 'Chinook_salmon')]
+salmon = np.array(salmon['Length'])
 ```
 
 To import package with metalog distribution run the code:
@@ -54,13 +55,13 @@ To **fit the data to metalog distribution** one should use function ```metalog.f
 Fit metalog distribution to data and store the result to variable ```salmon_metalog```. The distribution is bounded on both sides: from 0 to 200. Term limit is set to 10:
 
 ```
-salmon_metalog = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_limit=10)
+metalog_salmon = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_limit=10)
 ```
 
 To get **summary of distribution** call the following function with only one argument ```m``` - the variable that stores fitted metalog distribution:
 
 ```
-metalog.summary(m=salmon_metalog)
+metalog.summary(m=metalog_salmon)
 ```
 
 Output:
