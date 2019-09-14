@@ -103,3 +103,5 @@ metalog.plot(m=metalog_salmon)
 ```
 
 Output:
+
+![pdf](https://raw.githubusercontent.com/kimsergeo/metalog/master/figures/figure_1.png)
