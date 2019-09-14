@@ -13,11 +13,40 @@ The following [paper](http://www.metalogdistributions.com/images/TheMetalogDistr
 
 This Python package was transfered from [RMetalog](https://github.com/isaacfab/RMetalog) package and therefore shares the same R-based structure.
 
-The [data](https://www.sciencebase.gov/catalog/item/5b45380fe4b060350a140b7b) used for demonstration are body length of salmon and was collected in 2008-2010:
+The [data](https://www.sciencebase.gov/catalog/item/5b45380fe4b060350a140b7b) used for demonstration are body length of salmon and were collected in 2008-2010:
 
 ```
 import numpy as np
 import pandas as pd
 
-salmon = np.array(pd.read_csv("salmon.csv")['Length'])
+salmon = chinook = pd.read_csv("Chinook and forage fish lengths.csv")
+
+# Filtered data for eelgrass vegetation and chinook salmon
+chinook = chinook[(chinook['Vegetation'] == 'Eelgrass') & (chinook['Species'] == 'Chinook_salmon')]
 ```
+
+To import package with metalog distribution run the code:
+
+```
+from metalog import metalog
+```
+
+To fit the data to metalog distribution one should use function ```metalog.fit()```. It has the following arguments:
+
+```x```: data.
+
+```bounds```: bounds of metalog distribution. Depending on ```boundedness``` argument can take zero, one or two values.
+
+```boundedness```: boundedness of metalog distribution. Can take values ```'u'``` for unbounded, ```'sl'``` for semi-bounded lower, ```'su'``` for semi-bounded upper and ```'b'``` for bounded on both sides.
+
+```term_limit```: maximum number of terms to specify the metalog distribution. Can take values from 3 to 30.
+
+```term_lower_bound```: the lowest number of terms to specify the metalog distribution. Must be greater or equal to 2 and less than ```term_limit```
+
+```step_len```: size of steps to summarize the distribution.
+
+```probs```: probabilities corresponding to data.
+
+```fit_method```: fit method ```'OLS'```, ```'LP'``` or ```'any'```.
+
+```save_data```: if ```True``` then data will be saved for future update.
