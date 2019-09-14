@@ -19,10 +19,10 @@ The [data](https://www.sciencebase.gov/catalog/item/5b45380fe4b060350a140b7b) us
 import numpy as np
 import pandas as pd
 
-salmon = chinook = pd.read_csv("Chinook and forage fish lengths.csv")
+salmon = pd.read_csv("Chinook and forage fish lengths.csv")
 
 # Filtered data for eelgrass vegetation and chinook salmon
-chinook = chinook[(chinook['Vegetation'] == 'Eelgrass') & (chinook['Species'] == 'Chinook_salmon')]
+salmon = salmon[(salmon['Vegetation'] == 'Eelgrass') & (salmon['Species'] == 'Chinook_salmon')]
 ```
 
 To import package with metalog distribution run the code:
@@ -41,13 +41,18 @@ To fit the data to metalog distribution one should use function ```metalog.fit()
 
 - ```term_limit```: maximum number of terms to specify the metalog distribution. Can take values from 3 to 30.
 
-- ```term_lower_bound```: the lowest number of terms to specify the metalog distribution. Must be greater or equal to 2 and less than ```term_limit```
+- ```term_lower_bound```: the lowest number of terms to specify the metalog distribution. Must be greater or equal to 2 and less than ```term_limit```. The argument is optional. Default value is 2.
 
-- ```step_len```: size of steps to summarize the distribution.
+- ```step_len```: size of steps to summarize the distribution. The argument is optional. Default value is 0.01.
 
-- ```probs```: probabilities corresponding to data.
+- ```probs```: probabilities corresponding to data. The argument is optional. Default value is ```numpy.nan```.
 
-- ```fit_method```: fit method ```'OLS'```, ```'LP'``` or ```'any'```.
+- ```fit_method```: fit method ```'OLS'```, ```'LP'``` or ```'any'```. The argument is optional. Default value is ```'any'```.
 
-- ```save_data```: if ```True``` then data will be saved for future update.
+- ```save_data```: if ```True``` then data will be saved for future update. The argument is optional. Default values is ```False```.
 
+Fit metalog distribution to data and store the result to variable ```salmon_metalog```. The distribution is bounded on both sides: from 0 to 200. ,:
+
+```
+salmon_metalog = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_limit=10)
+```
