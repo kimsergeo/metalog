@@ -106,7 +106,7 @@ Output:
 
 ![pdf_cdf](https://raw.githubusercontent.com/kimsergeo/metalog/master/figures/figure_1.png)
 
-To draw samples from distribution use ```metalog.r()``` function where ```n``` is number of samples and ```term``` specifies the terms of distribution to sample from:
+**To draw samples** from distribution use ```metalog.r()``` function where ```n``` is number of samples and ```term``` specifies the terms of distribution to sample from:
 
 ```
 metalog.r(m=metalog_salmon, n=5, term=10)
@@ -118,7 +118,7 @@ Output:
 array([73.81897286, 86.74055734, 84.22509619, 83.80426247, 97.79800677])
 ```
 
-To get densities based on quantiles type ```metalog.d()``` function where ```q``` is vector of quantiles:
+**To get densities** based on quantiles type ```metalog.d()``` function where ```q``` is vector of quantiles:
 
 ```
 metalog.d(m=metalog_salmon, q=[50, 110, 150], term=10)
@@ -130,7 +130,7 @@ Output:
 array([0.00038265, 0.00712032, 0.00373991])
 ```
 
-To calculate probabilities based on quantiles use ```metalog.p()``` function:
+**To calculate probabilities** based on quantiles use ```metalog.p()``` function:
 
 ```
 metalog.p(m=metalog_salmon, q=[50, 110, 150], term=10)
@@ -142,7 +142,7 @@ Output:
 array([0.00275336, 0.82349578, 0.98686581])
 ```
 
-Finally, to get quantiles from probabilites input ```metalog.q()```:
+Finally, **to get quantiles** from probabilites input ```metalog.q()```:
 
 ```
 metalog.q(m=metalog_salmon, y=[0.00275336, 0.82349578, 0.98686581], term=10)
