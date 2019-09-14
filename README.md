@@ -11,7 +11,7 @@ The following [paper](http://www.metalogdistributions.com/images/TheMetalogDistr
 
 ## Using the Package
 
-This Python package was transfered from [RMetalog](https://github.com/isaacfab/RMetalog) package and therefore shares the same R-based structure.
+This Python package was transfered from [RMetalog](https://github.com/isaacfab/RMetalog) package by Isaac J. Faber and therefore shares the same R-based structure.
 
 The [data](https://www.sciencebase.gov/catalog/item/5b45380fe4b060350a140b7b) used for demonstration are body length of salmon and were collected in 2008-2010:
 
@@ -104,4 +104,17 @@ metalog.plot(m=metalog_salmon)
 
 Output:
 
-![pdf](https://raw.githubusercontent.com/kimsergeo/metalog/master/figures/figure_1.png)
+![pdf_cdf](https://raw.githubusercontent.com/kimsergeo/metalog/master/figures/figure_1.png)
+
+To draw samples from distribution use ```metalog.r()``` function where ```n``` is number of samples and ```term``` specifies the terms of distribution to sample from:
+
+```
+metalog.r(m=metalog_salmon, n=5, term=10)
+```
+
+Output:
+
+```
+array([73.81897286, 86.74055734, 84.22509619, 83.80426247, 97.79800677])
+```
+
