@@ -51,8 +51,47 @@ To fit the data to metalog distribution one should use function ```metalog.fit()
 
 - ```save_data```: if ```True``` then data will be saved for future update. The argument is optional. Default values is ```False```.
 
-Fit metalog distribution to data and store the result to variable ```salmon_metalog```. The distribution is bounded on both sides: from 0 to 200. ,:
+Fit metalog distribution to data and store the result to variable ```salmon_metalog```. The distribution is bounded on both sides: from 0 to 200. Term limit is set to 10:
 
 ```
 salmon_metalog = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_limit=10)
+```
+
+To get summary of distribution call the following function with only one argument ```m``` - the variable that stores fitted metalog distribution:
+
+```
+metalog.summary(m=metalog)
+```
+
+Output:
+
+```
+ -----------------------------------------------
+ SUMMARY OF METALOG DISTRIBUTION OBJECT
+ -----------------------------------------------
+
+PARAMETERS
+ 
+ Term Limit:  10 
+ Term Lower Bound:  2 
+ Boundedness:  b 
+ Bounds (only used based on boundedness):  [0, 200] 
+ Step Length for Distribution Summary:  0.01 
+ Method Use for Fitting:  any 
+ Number of Data Points Used:  138 
+ Original Data Saved:  False 
+ 
+
+VALIDATION AND FIT METHOD
+ 
+     term valid method
+2      2   yes    OLS
+3      3   yes    OLS
+4      4   yes    OLS
+5      5   yes    OLS
+6      6   yes    OLS
+7      7   yes    OLS
+8      8   yes    OLS
+9      9   yes    OLS
+10    10   yes    OLS
 ```
