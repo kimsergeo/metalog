@@ -60,7 +60,7 @@ salmon_metalog = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_li
 To get summary of distribution call the following function with only one argument ```m``` - the variable that stores fitted metalog distribution:
 
 ```
-metalog.summary(m=metalog)
+metalog.summary(m=salmon_metalog)
 ```
 
 Output:
@@ -95,3 +95,11 @@ VALIDATION AND FIT METHOD
 9      9   yes    OLS
 10    10   yes    OLS
 ```
+
+It's possible to plot corresponding PDF and CDF of metalog distribution:
+
+```
+metalog.plot(m=metalog_salmon)
+```
+
+Output:
