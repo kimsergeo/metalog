@@ -13,7 +13,7 @@ The following [paper](http://www.metalogdistributions.com/images/TheMetalogDistr
 
 This Python package was transfered from [RMetalog](https://github.com/isaacfab/RMetalog) package by Isaac J. Faber and therefore shares the same R-based structure.
 
-The package requires the following packages: numpy, pandas, matplotlib and scipy (ver 1.3.1).
+The package requires the following packages: **numpy, pandas, matplotlib and scipy (ver 1.3.1)**.
 
 The [data](https://www.sciencebase.gov/catalog/item/5b45380fe4b060350a140b7b) used for demonstration are body length of salmon and were collected in 2008-2010:
 
