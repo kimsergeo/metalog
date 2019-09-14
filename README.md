@@ -31,7 +31,7 @@ To import package with metalog distribution run the code:
 from metalog import metalog
 ```
 
-To fit the data to metalog distribution one should use function ```metalog.fit()```. It has the following arguments:
+To **fit the data to metalog distribution** one should use function ```metalog.fit()```. It has the following arguments:
 
 - ```x```: data.
 
@@ -57,7 +57,7 @@ Fit metalog distribution to data and store the result to variable ```salmon_meta
 salmon_metalog = metalog.fit(x=salmon, boundedness='b', bounds=[0, 200], term_limit=10)
 ```
 
-To get summary of distribution call the following function with only one argument ```m``` - the variable that stores fitted metalog distribution:
+To get **summary of distribution** call the following function with only one argument ```m``` - the variable that stores fitted metalog distribution:
 
 ```
 metalog.summary(m=salmon_metalog)
@@ -96,7 +96,7 @@ VALIDATION AND FIT METHOD
 10    10   yes    OLS
 ```
 
-It's possible to plot corresponding PDF and CDF of metalog distribution:
+It's possible **to plot corresponding PDF and CDF** of metalog distribution:
 
 ```
 metalog.plot(m=metalog_salmon)
