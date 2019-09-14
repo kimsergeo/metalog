@@ -33,20 +33,21 @@ from metalog import metalog
 
 To fit the data to metalog distribution one should use function ```metalog.fit()```. It has the following arguments:
 
-```x```: data.
+- ```x```: data.
 
-```bounds```: bounds of metalog distribution. Depending on ```boundedness``` argument can take zero, one or two values.
+- ```bounds```: bounds of metalog distribution. Depending on ```boundedness``` argument can take zero, one or two values.
 
-```boundedness```: boundedness of metalog distribution. Can take values ```'u'``` for unbounded, ```'sl'``` for semi-bounded lower, ```'su'``` for semi-bounded upper and ```'b'``` for bounded on both sides.
+- ```boundedness```: boundedness of metalog distribution. Can take values ```'u'``` for unbounded, ```'sl'``` for semi-bounded lower, ```'su'``` for semi-bounded upper and ```'b'``` for bounded on both sides.
 
-```term_limit```: maximum number of terms to specify the metalog distribution. Can take values from 3 to 30.
+- ```term_limit```: maximum number of terms to specify the metalog distribution. Can take values from 3 to 30.
 
-```term_lower_bound```: the lowest number of terms to specify the metalog distribution. Must be greater or equal to 2 and less than ```term_limit```
+- ```term_lower_bound```: the lowest number of terms to specify the metalog distribution. Must be greater or equal to 2 and less than ```term_limit```
 
-```step_len```: size of steps to summarize the distribution.
+- ```step_len```: size of steps to summarize the distribution.
 
-```probs```: probabilities corresponding to data.
+- ```probs```: probabilities corresponding to data.
 
-```fit_method```: fit method ```'OLS'```, ```'LP'``` or ```'any'```.
+- ```fit_method```: fit method ```'OLS'```, ```'LP'``` or ```'any'```.
 
-```save_data```: if ```True``` then data will be saved for future update.
+- ```save_data```: if ```True``` then data will be saved for future update.
+
