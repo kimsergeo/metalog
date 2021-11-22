@@ -19,7 +19,7 @@ def fit(x,
         save_data=False):
     # Input validation
     
-    if ((type(x) is not list) and (type(x) is not np.ndarray)) or (not all(isinstance(b, (int, float, np.int_, np.float_)) for b in x)):
+    if ((type(x) is not list) and (type(x) is not np.ndarray)) or (not all(isinstance(b, (int, float, np.int_, np.float_, np.int64, np.float64, np.float32, np.int32)) for b in x)):
         raise Exception("Error: 'x' must be a numeric vector of type 'list' or 'numpy.ndarray'")
     
     if ((type(bounds) is not list) and (type(bounds) is not np.ndarray)) or (not all(isinstance(b, (int, float, np.int_, np.float_)) for b in bounds)):
