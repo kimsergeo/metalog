@@ -555,9 +555,6 @@ def plot(m, norm=True):
                 }
             )
 
-    # ggplot style
-    plt.style.use("ggplot")
-
     fig, ax = plt.subplots(
         len(InitialResults), 2, figsize=(8, 3 * len(InitialResults)), sharex="col"
     )
